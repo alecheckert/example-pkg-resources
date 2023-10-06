@@ -25,7 +25,7 @@ setuptools.setup(
     name="pkg2",
     version="0.0.1",
     packages=["pkg2"],
-    install_requires=[],
+    install_requires=["pybind11>=2.6", "pkg2_data"],
     package_dir={"": "src"},
     ext_modules=ext_modules,
     cmdclass={"build_ext": build_ext},
