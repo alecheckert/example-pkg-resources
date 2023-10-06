@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>42", "numpy", "tifffile"]
+requires = ["setuptools>42"]
 build-backend = "setuptools.build_meta"
 packages = ["pkg1"]
 package-dir = ["src"]
@@ -7,8 +7,5 @@ include-package-data = true
 
 [project]
 name = "pkg1"
-dynamic = ["version"]
+version = "0.0.1"
 dependencies = ["numpy", "tifffile"]
-
-[tool.setuptools.dynamic]
-version = {attr = "pkg1.__version__"}
