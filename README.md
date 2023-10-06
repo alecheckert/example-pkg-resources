@@ -29,3 +29,10 @@ section of the `pyproject.toml`.
 
 A second disadvantage of `example2` is that each user needs to compile
 their own extensions, which is asking for trouble.
+
+The last resort is shown in `example3`. In this case, we set an environmental
+variable at import in the Python layer encoding the path to the data files.
+These environment variables can be looked up at runtime in the C++ layer
+via the `getenv` preprocess directive.
+
+I'd be curious to know if there are better alternatives to this.
