@@ -21,9 +21,11 @@ and code into two packages (`pkg2_data` and `pkg2`). Then we do the following:
 Unfortunately this doesn't play well with `pip install`, which automatically
 performs the build (including installation of all build-time dependencies)
 in an isolated virtual environment that is deleted after the build. That is,
-any paths to build-time dependencies baked into a wheel at build time will be
+any paths to build-time dependencies baked into a wheel will be
 invalid at runtime. This can be disabled with the `--no-build-isolation`
 option to `pip`, but at the cost of disabling `pip`'s attractive ability to
 resolve build-time dependencies as listed in the `build-system.requires`
 section of the `pyproject.toml`.
 
+A second disadvantage of `example2` is that each user needs to compile
+their own extensions, which is asking for trouble.
