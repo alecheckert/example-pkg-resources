@@ -2,7 +2,7 @@
 Example of a hybrid C++/Python package bundled with non-code data files. An example
 package for myself to reference in future projects.
 
-## Purpose
+## Overview
 
 Say we have a package that includes some non-code data files that we need to reference at
 runtime. For a pure Python package, a simple way to make this work is to include these
