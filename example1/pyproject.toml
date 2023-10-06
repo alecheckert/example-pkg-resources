@@ -1,3 +1,14 @@
 [build-system]
-requires = ["setuptools>42"]
+requires = ["setuptools>42", "numpy", "tifffile"]
 build-backend = "setuptools.build_meta"
+packages = ["pkg1"]
+package-dir = ["src"]
+include-package-data = true
+
+[project]
+name = "pkg1"
+dynamic = ["version"]
+dependencies = ["numpy", "tifffile"]
+
+[tool.setuptools.dynamic]
+version = {attr = "pkg1.__version__"}
